@@ -1,9 +1,12 @@
 sap.ui.define(
-    [],
-    function(){
+    ["sap/m/Text"],
+    function(Text){
         "use strict";
 
-
-        alert("hello ui5 i am alert");
+        var oText = new Text({
+            text: "Hello World! i am from js",
+            width: "100%"
+        });
+      oText.placeAt("content");
 
 });
