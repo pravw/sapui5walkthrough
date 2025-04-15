@@ -1,7 +1,16 @@
-<mvc:View controllerName="project2.controller.App"
+<mvc:View 
+     controllerName="project2.controller.App"
     displayBlock="true"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <App id="app">
+
+    <!-- <Text id="idT"  text="HI i am from xml"></Text> -->
+
+    <Button  id="idB" text="say hi" press=".onShowHello"></Button>
     </App>
 </mvc:View>
+
+
+
+
