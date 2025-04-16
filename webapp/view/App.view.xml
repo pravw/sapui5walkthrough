@@ -1,15 +1,26 @@
-<mvc:View 
-     controllerName="project2.controller.App"
-    displayBlock="true"
+<mvc:View
+    controllerName="project2.controller.App"
+    xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <App id="app">
-
-    <!-- <Text id="idT"  text="HI i am from xml"></Text> -->
-
-    <Button  id="idB" text="say hi" press=".onShowHello"></Button>
-    </App>
+>
+    <Button
+        id="idB"
+        text="{i18n>showHelloButtonText}"
+        press=".onShowHello"
+    />
+    <Input
+        id="idI"
+        value="{/recipient/name}"
+        description="Hello {/recipient/name}"
+        valueLiveUpdate="true"
+        width="60%"
+    />
 </mvc:View>
+
+
+
+
+
 
 
 

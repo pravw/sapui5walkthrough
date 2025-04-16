@@ -1,26 +1,37 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
-    "project2/model/models"
-], (UIComponent, models) => {
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/model/resource/ResourceModel"
+], function (UIComponent, JSONModel, ResourceModel) {
     "use strict";
-
     return UIComponent.extend("project2.Component", {
-        metadata: {
-            manifest: "json",
-            interfaces: [
-                "sap.ui.core.IAsyncContentCreation"
-            ]
+        metadata : {
+            rootView: {
+                "viewName": "project2.view.App",
+                "type": "XML",
+                "async": true,
+                "id": "app"
+            }
         },
-
-        init() {
-            // call the base component's init function
+        init : function () {
+            // call the init function of the parent
             UIComponent.prototype.init.apply(this, arguments);
+            // set data models
+            var oData = {
+                recipient: {
+                    name: "UI5"
+                }
+            };
+            var oModel = new JSONModel(oData);
+            this.setModel(oModel);
 
-            // set the device model
-            this.setModel(models.createDeviceModel(), "device");
-
-            // enable routing
-            this.getRouter().initialize();
+            // set i18n model
+            var i18nModel = new ResourceModel({
+                bundleName: "project2.i18n.i18n",
+                supportedLocales: [""],
+                fallbackLocale: ""
+            });
+            this.setModel(i18nModel, "i18n")
         }
     });
 });
