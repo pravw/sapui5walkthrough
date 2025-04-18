@@ -7,10 +7,7 @@ sap.ui.define([
     return UIComponent.extend("project2.Component", {
         metadata : {
             rootView: {
-                "viewName": "project2.view.App",
-                "type": "XML",
-                "async": true,
-                "id": "app"
+                 manifest: "json"
             }
         },
         init : function () {
@@ -26,12 +23,7 @@ sap.ui.define([
             this.setModel(oModel);
 
             // set i18n model
-            var i18nModel = new ResourceModel({
-                bundleName: "project2.i18n.i18n",
-                supportedLocales: [""],
-                fallbackLocale: ""
-            });
-            this.setModel(i18nModel, "i18n")
+
         }
     });
 });

@@ -12,7 +12,8 @@
         data-sap-ui-resourceroots='{
             "project2": "./"
         }'
-        data-sap-ui-oninit="module:project2/index"
+       
+        data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
         data-sap-ui-libs="sap.m"
         data-sap-ui-compatVersion="edge"
         data-sap-ui-async="true"
@@ -20,6 +21,8 @@
     ></script>
 </head>
 <body class="sapUiBody" id="content">
+    <div data-sap-ui-component data-name="project2" data-id="container" data-settings='{"id" : "walkthrough"}'>
+    </div>
 
    
 </body>
