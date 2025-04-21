@@ -10,10 +10,6 @@ sap.ui.define([
 
   return Controller.extend("project2.controller.App", {
 
-     
-
-      
-
       onShowHello: function(){
         var oBundle = this.getView().getModel("i18n").getResourceBundle();
         var sRecipient = this.getView().getModel().getProperty("/recipient/name");
