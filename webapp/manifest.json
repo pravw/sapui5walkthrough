@@ -53,6 +53,11 @@
             "suppoertedLocales": [""],
                      "fallbackLocale": ""
         }
+      },
+      "invoice1":{
+        "type":"sap.ui.model.json.JSONModel",
+        "uri": "Invoices.json"
+
       }
     },
     "resources": {

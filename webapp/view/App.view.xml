@@ -17,6 +17,8 @@
                     <content>
                      <mvc:XMLView 
                              viewName="project2.view.HelloPanel"/>
+                      <mvc:XMLView 
+                             viewName="project2.view.InvoiceList"/>
                        
                     </content>
                 </Page>
